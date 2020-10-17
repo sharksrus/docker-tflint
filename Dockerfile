@@ -1,6 +1,7 @@
 FROM alpine:3.12.0
 LABEL Glen Stummer <glen@glen.dev>
 
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 RUN apk add --no-cache --virtual .build-deps \
     zip~=3.0 \
     wget~=1.20.3-r1 \

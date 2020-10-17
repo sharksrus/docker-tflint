@@ -8,14 +8,6 @@ command:
     stderr: []
     timeout: 5000
     skip: False
-  jq-version:
-    exit-status: 0
-    exec: 'jq --version'
-    stdout:
-      - 'jq-master-v20200428-28-g864c859e9d'
-    stderr: []
-    timeout: 5000
-    skip: False
   tflint-version:
     exit-status: 0
     exec: "tflint --version"

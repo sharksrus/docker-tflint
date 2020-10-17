@@ -1,0 +1,27 @@
+
+---
+command:
+  alpine-version:
+    exit-status: 0
+    exec: 'cat /etc/alpine-release'
+    stdout:
+      - '3.12.0'
+    stderr: []
+    timeout: 5000
+    skip: False
+  jq-version:
+    exit-status: 0
+    exec: 'jq --version'
+    stdout:
+      - 'jq-master-v20200428-28-g864c859e9d'
+    stderr: []
+    timeout: 5000
+    skip: False
+  tflint-version:
+    exit-status: 0
+    exec: "tflint --version"
+    stdout:
+      - 'TFLint version 0.20.2'
+    stderr: []
+    timeout: 5000
+    skip: False

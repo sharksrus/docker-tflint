@@ -1,4 +1,4 @@
-FROM alpine:3.12.0
+FROM alpine:3.12.1
 LABEL Glen Stummer <glen@glen.dev>
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]

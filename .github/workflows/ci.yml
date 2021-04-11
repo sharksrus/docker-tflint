@@ -33,11 +33,11 @@ jobs:
           echo my event was ${GITHUB_EVENT_NAME}
       - name: 'tag-image'
         id: 'vars'
-        run: 'echo ::set-env name=TAG::$(cat VERSION.txt)'
+        run: 'echo ::set-output name=TAG::$(cat VERSION.txt)'
         shell: 'bash'
       - name: 'float-tag-image'
         id: 'vars-float'
-        run: "echo ::set-env name=FLOAT_TAG::$(cat VERSION.txt|sed 's/^.*[^0-9]\\([0-9]*\\.[0-9]*\\.[0-9]*\\).*$/\\1/' | awk -F '.' '{print $2}')"
+        run: "echo ::set-output name=FLOAT_TAG::$(cat VERSION.txt|sed 's/^.*[^0-9]\\([0-9]*\\.[0-9]*\\.[0-9]*\\).*$/\\1/' | awk -F '.' '{print $2}')"
       - name: 'build and tag image'
         id: 'build-tag-image'
         run: |
